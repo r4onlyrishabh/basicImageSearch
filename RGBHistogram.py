@@ -9,4 +9,10 @@ class RGBHist:
 		hist = cv2.calcHist([image], [0, 1, 2], None, self.bins, [0, 256, 0, 256, 0, 256])
 		hist = cv2.normalize(hist)
 		
-		return hist.flatten() 
+		return hist.flatten()
+	
+	def getHistWithoutFlatten(self, image):
+		hist = cv2.calcHist([image], [0, 1, 2], None, self.bins, [0, 256, 0, 256, 0, 256])
+		hist = cv2.normalize(hist)
+		
+		return hist
