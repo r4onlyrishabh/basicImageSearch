@@ -8,3 +8,10 @@ def chi2Dist(array1, array2):
 		den = a+b+k
 		d += (float)(num/den)
 	return d		
+
+def euclid2Dist(array1, array2):
+	d = 0
+	for (a, b) in zip(array1, array2):
+		num = (a-b)**2
+		d += (float)(num)
+	return d	
